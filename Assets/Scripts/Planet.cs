@@ -6,32 +6,15 @@ public class Planet : MonoBehaviour
 {
 
     [Range(2,256)]
-    public int resolution = 10;
+    public PlanetShapeSettings planetShapeSettings;
     public Material material;
-    public float diameter = 1;
+    Generator generator;
     MeshFilter[] meshFilters;
     Face[] faces;
 
-    void Awake(){
-
-        //If no material is set then use the "Standard" material
-        if(material == null){
-
-            material = new Material(Shader.Find("Standard"));
-
-        }
-
-    }
-
-    //Regenerate the mesh 60 times per second
-    void FixedUpdate(){
-
-        Initialize();
-        GenerateMesh();
-
-    }
-
     void Initialize(){
+
+        generator = new Generator(planetShapeSettings);
 
         //If we have generated no faces yet then make a new array of mesh filters
         if(meshFilters == null || meshFilters.Length == 0){
@@ -60,9 +43,17 @@ public class Planet : MonoBehaviour
             }
 
             //Assign the faces
-            faces[i] = new Face(meshFilters[i].sharedMesh,resolution,directions[i],diameter);
+            faces[i] = new Face(generator,meshFilters[i].sharedMesh,planetShapeSettings.resolution,directions[i]);
 
         }
+
+    }
+
+    public void GeneratePlanet(){
+
+        Initialize();
+        GenerateMesh();   
+        GenerateColors();     
 
     }
 
@@ -76,5 +67,31 @@ public class Planet : MonoBehaviour
         }
 
     }
+
+    void GenerateColors(){
+
+        foreach(MeshFilter meshFilter in meshFilters){
+
+            //Generate colors based on height
+
+        }
+
+    }
+
+    public void OnPlanetShapeSettingsUpdated(){
+
+        Initialize();
+        GenerateMesh();
+
+    }
+
+    public void OnPlanetColorSettingsUpdated(){
+
+        Initialize();
+        GenerateMesh();
+
+    }
+
+
     
 }

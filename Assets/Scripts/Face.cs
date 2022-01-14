@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Face{
 
-    float planetDiameter;
+    Generator generator;
     Mesh mesh;
     int resolution;
     Vector3 localUp;
     Vector3 localForward;
     Vector3 localRight;
 
-    public Face(Mesh mesh,int resolution,Vector3 localUp,float diameter){
+    public Face(Generator generator, Mesh mesh,int resolution,Vector3 localUp){
 
         this.mesh = mesh;
         this.resolution = resolution;
         this.localUp = localUp;
-        planetDiameter = diameter;
+        this.generator = generator;
 
         localRight = new Vector3(localUp.y,localUp.z,localUp.x);
         localForward = Vector3.Cross(localUp,localRight);
@@ -41,8 +41,8 @@ public class Face{
                 //How far along the triangle list we are percentage wise
                 Vector2 percent = new Vector2(x,y) / (resolution - 1);
                 Vector3 pointOnUnitCube = localUp + (percent.x-0.5f)* 2f * localRight + (percent.y - 0.5f) * 2 * localForward;
-                Vector3 pointOnUnitSphere = pointOnUnitCube.normalized * planetDiameter;
-                vertices[i] = pointOnUnitSphere;
+                Vector3 pointOnUnitSphere = pointOnUnitCube.normalized;
+                vertices[i] = generator.CalculatePointOnPlanet(pointOnUnitSphere);
 
                 //Don't make triangles starting on the last row of vertices or on the last column of vertices
                 if(x != resolution - 1 && y != resolution - 1){

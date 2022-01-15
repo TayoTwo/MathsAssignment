@@ -37,7 +37,7 @@ public class PlanetEditor : MonoBehaviour
     //Regenerate the planet 60 times per second (Will most likely change in the future)
     void FixedUpdate() {
 
-        planet.GeneratePlanet();
+       // planet.GeneratePlanet();
         
     }
 

@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Planet
-  m_Shader: {fileID: -6465566751694194690, guid: 7b5a0421d0b27b54d9a89c94e496506e, type: 3}
+  m_Name: FCP_BPicker
+  m_Shader: {fileID: 4800000, guid: 5c0325a4e257b5f46ab0ba57d89184a7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -55,28 +55,11 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _color:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_d03c4b87ae29470faf9b2b4db464df63: 3.93
-    - Vector1_e01e6e76d0ab43e2b265754b7a8a39c8: 2.5
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
+    - _DoubleMode: 0
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -90,9 +73,9 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _max: 3.3591735
-    - _min: 3
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color1: {r: 1, g: 0, b: 0, a: 1}
+    - _Color2: {r: 1, g: 0, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-  m_BuildTextureStacks: []
+    - _HSV: {r: 0, g: 1, b: 1, a: 1}

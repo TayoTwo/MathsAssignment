@@ -8,6 +8,8 @@ public class Planet : MonoBehaviour
     [Range(2,256)]
     public PlanetShapeSettings planetShapeSettings;
     public Material material;
+    public Gradient planetColorGradient;
+    public int textureResolution;
     Generator generator;
     MeshFilter[] meshFilters;
     Face[] faces;
@@ -64,15 +66,21 @@ public class Planet : MonoBehaviour
 
             face.ConstructMesh();
 
-        }
-
+        }        
     }
 
     void GenerateColors(){
 
         foreach(MeshFilter meshFilter in meshFilters){
-
             //Generate colors based on height
+            MeshRenderer meshRenderer = meshFilter.gameObject.GetComponent<MeshRenderer>();
+            meshRenderer.sharedMaterial.SetFloat("_min", generator.elevationMin);
+            meshRenderer.sharedMaterial.SetFloat("_max", generator.elevationMax);
+
+            Texture2D texture = new Texture2D(textureResolution, 1);
+            ChangeColorsTextureFromGradient(texture);
+
+            meshRenderer.material.SetTexture("_color", texture);
 
         }
 
@@ -92,6 +100,18 @@ public class Planet : MonoBehaviour
 
     }
 
+    public void ChangeColorsTextureFromGradient(Texture2D texture)
+    {
+        Color[] colors = new Color[textureResolution];
+        for (int i = 0; i < textureResolution; i++)
+        {
+            colors[i] = planetColorGradient.Evaluate(i / (textureResolution - 1f));
+        }
 
-    
+        texture.SetPixels(colors);
+        texture.Apply();
+    }
+
+
+
 }

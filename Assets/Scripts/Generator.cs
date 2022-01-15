@@ -8,6 +8,9 @@ public class Generator
     PlanetShapeSettings shapeSettings;
     NoiseFilter[] noiseFilters;
 
+    public float elevationMin;
+    public float elevationMax;
+
     public Generator(PlanetShapeSettings shapeSettings){
 
         this.shapeSettings = shapeSettings;
@@ -18,7 +21,8 @@ public class Generator
             noiseFilters[i] = new NoiseFilter(shapeSettings.noiseLayers[i].noiseSettings);
 
         }
-
+        elevationMin = float.MaxValue;
+        elevationMax = float.MinValue;
     }
 
     //Apply our noise layers to the points on the unit sphere
@@ -56,8 +60,19 @@ public class Generator
             }
 
         }
-        
-        return pointOnUnitSqhere * shapeSettings.planetRadius * (1 + elevation);
+
+        elevation = shapeSettings.planetRadius * (1 + elevation);
+
+        if (elevation < elevationMin)
+        {
+            elevationMin = elevation;
+        }
+        else if (elevation > elevationMax)
+        {
+            elevationMax = elevation;
+        }
+
+        return pointOnUnitSqhere * elevation;
 
     }
 

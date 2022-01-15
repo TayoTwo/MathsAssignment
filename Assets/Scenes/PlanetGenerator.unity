@@ -317,11 +317,91 @@ PrefabInstance:
     - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
       propertyPath: material
       value: 
-      objectReference: {fileID: 2100000, guid: 09c8a989476a13f4ba28dc7bccb9b8fe, type: 2}
+      objectReference: {fileID: 2100000, guid: 842f1dd9a412c0c438eb8fcce93b7419, type: 2}
     - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
       propertyPath: planetPrefab
       value: 
       objectReference: {fileID: 7377600005571901832, guid: 9a286966d4b291a4cb7017c1eef452ea, type: 3}
+    - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
+      propertyPath: textureResolution
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
+      propertyPath: planetColorGradient.ctime1
+      value: 4241
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
+      propertyPath: planetColorGradient.ctime2
+      value: 7517
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
+      propertyPath: planetColorGradient.ctime3
+      value: 56861
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
+      propertyPath: planetColorGradient.ctime4
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
+      propertyPath: planetColorGradient.key0.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
+      propertyPath: planetColorGradient.key0.g
+      value: 0.4831705
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
+      propertyPath: planetColorGradient.key0.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
+      propertyPath: planetColorGradient.key1.b
+      value: 0.052941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
+      propertyPath: planetColorGradient.key1.g
+      value: 0.9058465
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
+      propertyPath: planetColorGradient.key2.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
+      propertyPath: planetColorGradient.key2.g
+      value: 0.754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
+      propertyPath: planetColorGradient.key2.r
+      value: 0.021646159
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
+      propertyPath: planetColorGradient.key3.b
+      value: 0.24528301
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
+      propertyPath: planetColorGradient.key3.g
+      value: 0.24528301
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
+      propertyPath: planetColorGradient.key3.r
+      value: 0.24528301
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
+      propertyPath: planetColorGradient.key4.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
+      propertyPath: planetColorGradient.key4.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
+      propertyPath: planetColorGradient.key4.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804609453483549406, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
+      propertyPath: planetColorGradient.m_NumColorKeys
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7804609453483549407, guid: 6a28e8723eab0434b988b1535f4b9ae0, type: 3}
       propertyPath: m_RootOrder
       value: 2

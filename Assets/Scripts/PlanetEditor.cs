@@ -10,6 +10,8 @@ public class PlanetEditor : MonoBehaviour
     [SerializeField]
     public PlanetShapeSettings settings;
     public Material material;
+    public Gradient planetColorGradient;
+    public int textureResolution;
 
 
     void Awake(){
@@ -27,6 +29,8 @@ public class PlanetEditor : MonoBehaviour
 
         planet.material = material;
         planet.planetShapeSettings = settings;
+        planet.planetColorGradient = planetColorGradient;
+        planet.textureResolution = textureResolution;
         planet.GeneratePlanet();
     }
 

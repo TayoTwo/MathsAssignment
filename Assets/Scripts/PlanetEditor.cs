@@ -31,13 +31,13 @@ public class PlanetEditor : MonoBehaviour
         planet.planetShapeSettings = settings;
         planet.planetColorGradient = planetColorGradient;
         planet.textureResolution = textureResolution;
-        planet.GeneratePlanet();
+        //planet.GeneratePlanet();
     }
 
     //Regenerate the planet 60 times per second (Will most likely change in the future)
     void FixedUpdate() {
 
-       // planet.GeneratePlanet();
+        planet.GeneratePlanet();
         
     }
 
@@ -51,7 +51,36 @@ public class PlanetEditor : MonoBehaviour
         planet.material = material;
         planet.planetShapeSettings = settings;
         planet.GeneratePlanet();
-
+        
     }
     
+    public void Slider_Roughness1(float newRoughness)
+    {
+        planet.planetShapeSettings.noiseLayers[0].noiseSettings.roughness = newRoughness;
+    }
+    public void Slider_Persistence1(float newPersistence)
+    {
+        planet.planetShapeSettings.noiseLayers[0].noiseSettings.persistence = newPersistence;
+    }
+
+    public void Slider_MinValue1(float newMinValue)
+    {
+        planet.planetShapeSettings.noiseLayers[0].noiseSettings.minValue = newMinValue;
+    }
+
+    public void Slider_Roughness2(float newRoughness)
+    {
+        planet.planetShapeSettings.noiseLayers[1].noiseSettings.roughness = newRoughness;
+    }
+    public void Slider_Persistence2(float newPersistence)
+    {
+        planet.planetShapeSettings.noiseLayers[1].noiseSettings.persistence = newPersistence;
+    }
+
+    public void Slider_MinValue2(float newMinValue)
+    {
+        planet.planetShapeSettings.noiseLayers[1].noiseSettings.minValue = newMinValue;
+    }
+
+
 }
